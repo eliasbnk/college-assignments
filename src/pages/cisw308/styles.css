@@ -1,0 +1,97 @@
+.wrapper {
+  padding: 20px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80vw;
+  line-height: 1.25rem;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  text-align: right;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+tbody tr td {
+  border: 1px solid white;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+thead tr td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 2.75em;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+@media only screen and (min-width: 280px) {
+  .wrapper {
+    background-color: rgba(255, 0, 0, 0.716);
+  }
+  thead tr td {
+    font-size: 0.75em;
+  }
+  tbody tr td {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (min-height: 280px) {
+  .wrapper {
+    background-color: rgba(0, 128, 0, 0.54);
+  }
+  thead tr td {
+    font-size: 1em;
+  }
+  tbody tr td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-height: 555px) {
+  .wrapper {
+    background-color: rgba(0, 0, 255, 0.629);
+  }
+  thead tr td {
+    font-size: 1.5em;
+  }
+  tbody tr td {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (min-height: 679px) {
+  .wrapper {
+    background-color: rgba(218, 112, 214, 0.666);
+  }
+  thead tr td {
+    font-size: 1.75em;
+  }
+  tbody tr td {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (min-height: 737px) {
+  .wrapper {
+    background-color: rgba(0, 128, 128, 0.628);
+  }
+  tbody tr td {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}

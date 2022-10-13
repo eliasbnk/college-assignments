@@ -16,10 +16,9 @@
   ],
   "plugins": ["prettier", "@typescript-eslint", "react-hooks", "jest", "import", "react"],
   "rules": {
-
-"@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
-     "prefer-const": "error",
+    "prefer-const": "error",
     "@typescript-eslint/consistent-type-imports": "error",
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "no-console": "off",
