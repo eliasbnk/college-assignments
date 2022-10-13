@@ -83,8 +83,8 @@ const CISW308Assignment5: FC = () => {
     lat: number;
     lng: number;
   }>({
-    lat: 38.5816,
-    lng: -121.4944
+    lat: 38.582137391641716,
+    lng: -121.49342257254159
   });
 
   const [activeIndex, setActiveIndex] = useState(0);
