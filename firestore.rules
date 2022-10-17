@@ -1,9 +1,29 @@
+
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if
-          request.time < timestamp.date(2022, 11, 11);
+
+function isAuthenticated(){
+return request.auth.uid != null;
+}
+
+function isKnown(){
+return isAuthenticated() && exists (/databases/$(database)/documents/users/$(request.auth.uid))
+
+}
+
+function isAdmin(){
+return isAuthenticated() && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true
+}
+
+
+    match /users/{any} {
+    	allow read, write: if false;
+    }
+
+    match /classes/{any} {
+    	allow read: if isKnown()
+      allow write: if isAdmin()
     }
   }
 }

@@ -12,3 +12,9 @@ const config = {
 export const { firestore } = firebase;
 
 export const fire = firebase.initializeApp(config);
+
+export const authProvider = new firebase.auth.GoogleAuthProvider();
+
+export const db = fire.firestore();
+
+export const { Timestamp } = firebase.firestore;

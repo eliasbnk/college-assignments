@@ -37,7 +37,7 @@ const assignments = [
     link: '/cisw308/assignment-4',
     header: 'Assignment 4',
     description: 'Mobile Site',
-    meta: `${calcGrade(0, 150)}`,
+    meta: `${calcGrade(150, 150)}`,
     extra: 'complete'
   },
   {
@@ -45,7 +45,7 @@ const assignments = [
     link: '/cisw308/assignment-5',
     header: 'Assignment 5',
     description: 'Smartphone Features',
-    meta: `${calcGrade(0, 100)}`,
+    meta: `${calcGrade(100, 100)}`,
     extra: 'complete'
   }
 ];

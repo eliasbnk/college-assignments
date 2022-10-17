@@ -34,17 +34,26 @@ interface MyFormValues {
 }
 
 const validationSchema = yup.object({
-  email: yup.string().email().required(),
-  address1: yup.string().required(),
+  email: yup.string().email('please enter a valid e-mail address.').required('e-mail is required.'),
+  address1: yup.string().required('address is required.'),
   address2: yup.string(),
-  city: yup.string().required().max(17),
-  state: yup.string().required().min(2, 'Must be exactly 2 letters').max(2, 'Must be exactly 2 letters'),
+  city: yup
+    .string()
+    .matches(/^[a-zA-Z]+$/, 'city can only contian letters.')
+    .required('city is required.')
+    .max(17),
+  state: yup
+    .string()
+    .matches(/^[a-zA-Z]+$/, 'state can only contian letters.')
+    .required('state is required.')
+    .min(2, 'state must be exactly 2 letter long.')
+    .max(2, 'state must be exactly 2 letters long.'),
   zip: yup
     .string()
-    .required()
-    .matches(/^[0-9]+$/, 'Must be only digits')
-    .min(5, 'Must be exactly 5 digits')
-    .max(5, 'Must be exactly 5 digits')
+    .matches(/^[0-9]+$/, 'zip code can only contian digits.')
+    .required('zip code is required.')
+    .min(5, 'zip code must be exactly 5 digits.')
+    .max(5, 'zip code must be exactly 5 digits.')
 });
 
 const CISW400Assignment5: FC = () => {

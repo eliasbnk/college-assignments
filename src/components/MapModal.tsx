@@ -14,6 +14,8 @@ const MapModal: FC<{
     lng: number;
   };
 }> = ({ placeCoords, userCoords }) => {
+  console.log('🚀 ~ file: MapModal.tsx ~ line 18 ~ userCoords', userCoords);
+  console.log('🚀 ~ file: MapModal.tsx ~ line 20 ~ placeCoords', placeCoords);
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     try {

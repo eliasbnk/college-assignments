@@ -130,7 +130,7 @@ const CISW308Assignment5: FC = () => {
 
     setActiveIndex(newIndex);
   };
-
+  console.log(`CISW308Assignment5 has rendered`);
   return (
     <>
       <Helmet>
@@ -142,6 +142,7 @@ const CISW308Assignment5: FC = () => {
         <Submissions>
           <Accordion fluid styled style={{ maxWidth: '550px' }}>
             {favoritePlaces.map((place, index) => {
+              console.log(`favoritePlaces.map() i rendered`);
               return (
                 <div key={place.id}>
                   <Accordion.Title active={activeIndex === index} index={index} onClick={handleClick}>
