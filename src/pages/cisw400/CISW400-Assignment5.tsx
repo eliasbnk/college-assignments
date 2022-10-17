@@ -77,8 +77,12 @@ const CISW400Assignment5: FC = () => {
             initialValues={initialValues}
             onSubmit={(values, actions) => {
               actions.setSubmitting(true);
-              console.log({ values, actions });
-              alert(JSON.stringify(values, null, 2));
+              alert(`
+              Email: ${values.email} \n
+              Address: ${values.address1} ${values.address2 !== '' ? values.address2 : null}, ${values.city}, ${
+                values.state
+              } ${values.zip}
+              `);
               actions.resetForm();
               actions.setSubmitting(false);
             }}

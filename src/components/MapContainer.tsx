@@ -15,7 +15,6 @@ const MapContainer: FC<{
     height: '500px',
     width: '100%'
   };
-  console.log(`MapContainer i rendered, and i got the : ${placeCoords}`);
 
   return (
     <div>
