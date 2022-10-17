@@ -79,7 +79,7 @@ const CISW400Assignment5: FC = () => {
               actions.setSubmitting(true);
               alert(`
               Email: ${values.email} \n
-              Address: ${values.address1} ${values.address2 !== '' ? values.address2 : null}, ${values.city}, ${
+              Address: ${values.address1} ${values.address2 !== '' ? values.address2 : ''}, ${values.city}, ${
                 values.state
               } ${values.zip}
               `);
