@@ -54,7 +54,7 @@ const assignments = [
     header: 'Assignment 6',
     description: 'DHTML',
     meta: `${calcGrade(0, 100)}`,
-    extra: 'locked'
+    extra: 'complete'
   },
   {
     id: 'cisw400-assignment-7',
