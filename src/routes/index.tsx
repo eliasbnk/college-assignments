@@ -23,6 +23,7 @@ import {
   CISW400HomePage
 } from 'pages/cisw400';
 import { CISC305Assignment6, CISC305HomePage } from 'pages/cisc305';
+import { CISC323HomePage } from 'pages/cisc323';
 
 const Routing: FC = () => {
   return (
@@ -30,6 +31,7 @@ const Routing: FC = () => {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='*' element={<PageNotFound />} />
+        <Route path='/cisc323' element={<CISC323HomePage />} />;
         <Route path='/cisc305' element={<CISC305HomePage />} />
         <Route path='/cisc305/assignment-6' element={<CISC305Assignment6 />} />
         <Route path='/cisw308' element={<CISW308HomePage />} />

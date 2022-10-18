@@ -21,6 +21,8 @@ const Navbar: FC = () => {
       setURL('CISW 308');
     } else if (window.location.href.indexOf('cisc305') > -1) {
       setURL('CISC 305');
+    } else if (window.location.href.indexOf('cisc323') > -1) {
+      setURL('CISC 323');
     }
 
     setActivePage(pathName);
@@ -29,13 +31,7 @@ const Navbar: FC = () => {
   return (
     <NavbarWrapper>
       <div style={{ textAlign: 'right', marginRight: '19px', marginTop: '19px' }}>
-        <div>
-          <Label>
-            {url}
-            {url === '' ? null : ` · `}CRC · Fishman · Fall 2022
-          </Label>
-        </div>
-        <div style={{ marginTop: '5px' }}>
+        <div style={{ marginTop: '28px' }}>
           <Label>Ilya Babenko · W1793796</Label>
         </div>
       </div>
@@ -48,6 +44,8 @@ const Navbar: FC = () => {
           <Menu.Item name='CISW 308' active={activePage === '/cisw308'} as={Link} to={'/cisw308'} />
         ) : url === 'CISC 305' ? (
           <Menu.Item name='CISC 305' active={activePage === '/cisc305'} as={Link} to={'/cisc305'} />
+        ) : url === 'CISC 323' ? (
+          <Menu.Item name='CISC 323' active={activePage === '/cisc323'} as={Link} to={'/cisc323'} />
         ) : null}
         {
           {
