@@ -14,8 +14,8 @@ const CISS300HomePage: FC = () => {
         <div style={{ textAlign: 'center' }}>
           <Header as='h2' style={{ textAlign: 'center' }}>
             Assignments are completed on{' '}
-            <a href='https://tryhackme.com/p/w1793796' target='_blank' rel='noopener noreferrer'>
-              TryHackMe.com
+            <a href='https://tryhackme.com' target='_blank' rel='noopener noreferrer'>
+              TryHackMe
             </a>{' '}
             platform.
           </Header>
