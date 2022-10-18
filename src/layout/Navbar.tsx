@@ -23,6 +23,14 @@ const Navbar: FC = () => {
       setURL('CISC 305');
     } else if (window.location.href.indexOf('cisc323') > -1) {
       setURL('CISC 323');
+    } else if (window.location.href.indexOf('ciss300') > -1) {
+      setURL('CISS 300');
+    } else if (window.location.href.indexOf('cisc310') > -1) {
+      setURL('CISC 310');
+    } else if (window.location.href.indexOf('cisc324') > -1) {
+      setURL('CISC 324');
+    } else if (window.location.href.indexOf('cisw327') > -1) {
+      setURL('CISW 327');
     }
 
     setActivePage(pathName);
@@ -46,6 +54,14 @@ const Navbar: FC = () => {
           <Menu.Item name='CISC 305' active={activePage === '/cisc305'} as={Link} to={'/cisc305'} />
         ) : url === 'CISC 323' ? (
           <Menu.Item name='CISC 323' active={activePage === '/cisc323'} as={Link} to={'/cisc323'} />
+        ) : url === 'CISS 300' ? (
+          <Menu.Item name='CISS 300' active={activePage === '/ciss300'} as={Link} to={'/ciss300'} />
+        ) : url === 'CISC 310' ? (
+          <Menu.Item name='CISC 310' active={activePage === '/cisc310'} as={Link} to={'/cisc310'} />
+        ) : url === 'CISW 327' ? (
+          <Menu.Item name='CISW 327' active={activePage === '/cisw327'} as={Link} to={'/cisw327'} />
+        ) : url === 'CISC 324' ? (
+          <Menu.Item name='CISC 324' active={activePage === '/cisc324'} as={Link} to={'/cisc324'} />
         ) : null}
         {
           {
