@@ -38,10 +38,8 @@ const Navbar: FC = () => {
 
   return (
     <NavbarWrapper>
-      <div style={{ textAlign: 'right', marginRight: '19px', marginTop: '19px' }}>
-        <div style={{ marginTop: '28px' }}>
-          <Label>Ilya Babenko · W1793796</Label>
-        </div>
+      <div style={{ textAlign: 'right', marginRight: '19px', marginTop: '19px', marginTop: '38px' }}>
+        <Label>Ilya Babenko · W1793796</Label>
       </div>
 
       <Menu pointing secondary style={{ marginTop: '0px' }}>
