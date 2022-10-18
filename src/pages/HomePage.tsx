@@ -84,7 +84,7 @@ const HomePage: FC = () => {
               <Card key={collegeClass.id} as={Link} to={collegeClass.link}>
                 <Label
                   corner='right'
-                  icon={collegeClass.complete === 'complete' ? 'check' : 'sync alternative'}
+                  icon={collegeClass.complete === 'complete' ? 'check' : 'tasks'}
                   color={collegeClass.complete === 'complete' ? 'green' : 'orange'}
                 />
 
