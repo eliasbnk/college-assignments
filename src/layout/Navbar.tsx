@@ -38,7 +38,7 @@ const Navbar: FC = () => {
 
   return (
     <NavbarWrapper>
-      <div style={{ textAlign: 'right', marginRight: '19px', marginTop: '19px', marginTop: '38px' }}>
+      <div style={{ textAlign: 'right', marginRight: '19px', marginTop: '38px' }}>
         <Label>Ilya Babenko · W1793796</Label>
       </div>
 
