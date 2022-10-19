@@ -19,7 +19,6 @@ const CISW308Assignment5: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    setActiveIndex(0);
     getUserLocation();
   }, [getUserLocation]);
 
