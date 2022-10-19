@@ -2,11 +2,11 @@ import React from 'react';
 import type { FC } from 'react';
 import { Header, List, Icon } from 'semantic-ui-react';
 import CheckboxLabel from './CheckboxLabel';
-import { v4 as uuidv4 } from 'uuid';
 
 const LabAssignment: FC<{
   number: number;
   assignment: {
+    id: string;
     completed: boolean;
     name: string;
   }[];
@@ -22,7 +22,7 @@ const LabAssignment: FC<{
       <List>
         {assignment.map((a) => {
           return (
-            <List.Item key={uuidv4()}>
+            <List.Item key={a.id}>
               <CheckboxLabel checked={a.completed}>{a.name}</CheckboxLabel>
             </List.Item>
           );

@@ -2,6 +2,7 @@ import React from 'react';
 import type { FC } from 'react';
 import Helmet from 'react-helmet';
 import Routing from 'routes';
+import { UserLocationProvider } from 'contexts/UserLocation';
 
 const App: FC = () => {
   return (
@@ -17,8 +18,9 @@ background-color: lightgray; box-sizing: border-box;
   max-height: 100vh; }`}</style>
         <title>Home</title>
       </Helmet>
-
-      <Routing />
+      <UserLocationProvider>
+        <Routing />
+      </UserLocationProvider>
     </>
   );
 };

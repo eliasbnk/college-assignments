@@ -5,61 +5,12 @@ import Template from 'layout/Template';
 import Assignment from 'components/Assignment';
 import ExtraCredit from 'components/ExtraCredit';
 import Submissions from 'components/Submissions';
-import { v4 as uuidv4 } from 'uuid';
 import { Button, Header, Image } from 'semantic-ui-react';
-
-const assignment = [
-  {
-    completed: true,
-    name: 'a pop-up.'
-  },
-  {
-    completed: true,
-    name: 'a slide show that alternates a series of images in a timed-sequence loop.'
-  },
-  {
-    completed: true,
-    name: 'at least three images in the rotation.'
-  },
-  {
-    completed: true,
-    name: 'images on the slideshow are click-able and each image must link to a different URL.'
-  }
-];
-
-const extracredit = [
-  {
-    completed: true,
-    name: 'Make the images appear in random order.'
-  }
-];
-
-const images = [
-  {
-    id: uuidv4(),
-    name: 'crc',
-    src: 'https://crc.losrios.edu/crc/main/img/admin/logo/crc-logo.svg',
-    url: 'https://crc.losrios.edu/'
-  },
-  {
-    id: uuidv4(),
-    name: 'scc',
-    src: 'https://scc.losrios.edu/scc/main/img/sitewide-multi/logo/scc-logo-desktop.svg',
-    url: 'https://scc.losrios.edu/'
-  },
-  {
-    id: uuidv4(),
-    name: 'arc',
-    src: 'https://arc.losrios.edu/arc/main/img/logos/arc-logo.svg',
-    url: 'https://arc.losrios.edu/'
-  },
-  {
-    id: uuidv4(),
-    name: 'flc',
-    src: 'https://flc.losrios.edu/flc/shared/img/admin/logos-icons/flc-desktop-logo.svg',
-    url: 'https://flc.losrios.edu/'
-  }
-];
+import {
+  CISW400Assignment4AssignmentData,
+  CISW400Assignment4ExtraCreditData,
+  CISW400Assignment4Images
+} from 'contexts/data';
 
 const CISW400Assignment4: FC = () => {
   const [isDisabled, setIsDisabled] = useState(false);
@@ -72,8 +23,8 @@ const CISW400Assignment4: FC = () => {
     try {
       setCount(-1);
       setIsDisabled(true);
-      images.sort(() => Math.random() - 0.5);
-      setOrder(`order: ${images.map((elem) => elem.name)}`);
+      CISW400Assignment4Images.sort(() => Math.random() - 0.5);
+      setOrder(`order: ${CISW400Assignment4Images.map((elem) => elem.name)}`);
     } catch ({ message }) {
       console.error(message);
     } finally {
@@ -83,12 +34,12 @@ const CISW400Assignment4: FC = () => {
   }
   function cycleArray() {
     setCount((prevState) => prevState + 1);
-    if (count === images.length) {
+    if (count === CISW400Assignment4Images.length) {
       randomize();
       setCount(0);
     }
-    setURL(images[count].url);
-    setSRC(images[count].src);
+    setURL(CISW400Assignment4Images[count].url);
+    setSRC(CISW400Assignment4Images[count].src);
   }
 
   useEffect(() => {
@@ -103,8 +54,8 @@ const CISW400Assignment4: FC = () => {
         <title>CISW 400 - Assignment 4</title>
       </Helmet>
       <Template>
-        <Assignment assignment={assignment} />
-        <ExtraCredit assignment={extracredit} />
+        <Assignment assignment={CISW400Assignment4AssignmentData} />
+        <ExtraCredit assignment={CISW400Assignment4ExtraCreditData} />
         <Submissions>
           <Header as='h3'>{order}</Header>
           <div>

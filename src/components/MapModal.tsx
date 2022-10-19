@@ -2,18 +2,15 @@ import React, { useState } from 'react';
 import type { FC } from 'react';
 import { Button, Modal } from 'semantic-ui-react';
 import MapContainer from './MapContainer';
+import { useUserLocation } from 'contexts/UserLocation';
 
 const MapModal: FC<{
-  userCoords: {
-    lat: number;
-    lng: number;
-  };
-
   placeCoords: {
     lat: number;
     lng: number;
   };
-}> = ({ placeCoords, userCoords }) => {
+}> = ({ placeCoords }) => {
+  const { userCoords } = useUserLocation();
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     try {

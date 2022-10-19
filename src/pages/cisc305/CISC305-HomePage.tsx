@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Card, Icon } from 'semantic-ui-react';
-import { calcGrade } from 'utils/grade-calc';
+import { calcGrade } from 'utils/gradeCalc';
 import Template from 'layout/Template';
 import Title from 'components/Title';
 
@@ -40,7 +40,6 @@ const CISC305HomePage: FC = () => {
                 >
                   <Card.Content>
                     <Card.Header>{assignment.header}</Card.Header>
-
                     <Card.Meta>{assignment.meta}</Card.Meta>
                     <Card.Description>{assignment.description}</Card.Description>
                     <Card.Content extra align='right'>

@@ -5,15 +5,15 @@ import Template from 'layout/Template';
 import './styles.css';
 import Assignment from 'components/Assignment';
 import Submissions from 'components/Submissions';
-
-const assignment = [
-  { completed: true, name: 'auto-centered 1-month calendar.' },
-  { completed: true, name: 'month heading above calendar.' },
-  {
-    completed: true,
-    name: 'atleast 5 media queries (for each breakpoint change the calendar width, text-size, and background color ).'
-  }
-];
+import {
+  CISW308Assignment3AssignmentData,
+  CISW308Assignment3DayData,
+  CISW308Assignment3Week0Data,
+  CISW308Assignment3Week1Data,
+  CISW308Assignment3Week2Data,
+  CISW308Assignment3Week3Data,
+  CISW308Assignment3Week4Data
+} from 'contexts/data';
 
 const CISW308Assignment3: FC = () => {
   return (
@@ -22,78 +22,47 @@ const CISW308Assignment3: FC = () => {
         <title>CISW 308 - Assignment 3</title>
       </Helmet>
       <Template>
-        <Assignment assignment={assignment} />
+        <Assignment assignment={CISW308Assignment3AssignmentData} />
         <Submissions>
           <div className='wrapper'>
             <h2>September 2022</h2>
             <table cellSpacing={0} cellPadding={35} style={{ textAlign: 'center' }}>
               <thead>
                 <tr>
-                  <td>S</td>
-
-                  <td>M</td>
-
-                  <td>T</td>
-
-                  <td>W</td>
-
-                  <td>T</td>
-
-                  <td>F</td>
-
-                  <td>S</td>
+                  {CISW308Assignment3DayData.map((a) => {
+                    return <td key={a.id}>{a.name}</td>;
+                  })}
                 </tr>
               </thead>
-
               <tbody>
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>01</td>
-                  <td>02</td>
-                  <td>03</td>
+                  {CISW308Assignment3Week0Data.map((a) => {
+                    return <td key={a.id}>{a.name}</td>;
+                  })}
                 </tr>
-
                 <tr>
-                  <td>04</td>
-                  <td>05</td>
-                  <td>06</td>
-                  <td>07</td>
-                  <td>08</td>
-                  <td>09</td>
-                  <td>10</td>
+                  {CISW308Assignment3Week1Data.map((a) => {
+                    return <td key={a.id}>{a.name}</td>;
+                  })}
                 </tr>
-
                 <tr>
-                  <td>11</td>
-                  <td>12</td>
-                  <td>13</td>
-                  <td>14</td>
-                  <td>15</td>
-                  <td>16</td>
-                  <td>17</td>
+                  {CISW308Assignment3Week2Data.map((a) => {
+                    return <td key={a.id}>{a.name}</td>;
+                  })}
                 </tr>
-
                 <tr>
-                  <td>18</td>
-                  <td>19</td>
-                  <td style={{ backgroundColor: 'orange' }}>20</td>
-                  <td>21</td>
-                  <td>22</td>
-                  <td>23</td>
-                  <td>24</td>
+                  {CISW308Assignment3Week3Data.map((a) => {
+                    return (
+                      <td style={a.name === '20' ? { backgroundColor: 'orange' } : {}} key={a.id}>
+                        {a.name}
+                      </td>
+                    );
+                  })}
                 </tr>
-
                 <tr>
-                  <td>25</td>
-                  <td>26</td>
-                  <td>27</td>
-                  <td>28</td>
-                  <td>29</td>
-                  <td>30</td>
-                  <td></td>
+                  {CISW308Assignment3Week4Data.map((a) => {
+                    return <td key={a.id}>{a.name}</td>;
+                  })}
                 </tr>
               </tbody>
             </table>

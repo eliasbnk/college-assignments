@@ -4,15 +4,8 @@ import { Helmet } from 'react-helmet';
 import Template from 'layout/Template';
 import Assignment from 'components/Assignment';
 import Submissions from 'components/Submissions';
-import { Header } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-
-const assignment = [
-  { completed: true, name: 'Your Name' },
-  { completed: true, name: 'Heading for Class title/#' },
-  { completed: true, name: 'List of Assignment' },
-  { completed: true, name: 'No graphics' }
-];
+import { CISW308Assignment1AssignmentData } from 'contexts/data';
+import FirstAssignment from '../../components/FirstAssignment';
 
 const CISW308Assignment1: FC = () => {
   return (
@@ -21,13 +14,9 @@ const CISW308Assignment1: FC = () => {
         <title>CISW 308 - Assignment 1</title>
       </Helmet>
       <Template>
-        <Assignment assignment={assignment} />
+        <Assignment assignment={CISW308Assignment1AssignmentData} />
         <Submissions>
-          <Header as='h3'>Ilya Babenko</Header>
-          <Header as='h3'>W1793796</Header>
-          <Header as='h3'>
-            <Link to={'/cisw308'}>URL to student&#x2019;s assignment page</Link>
-          </Header>
+          <FirstAssignment link='/cisw308' />
         </Submissions>
       </Template>
     </>
