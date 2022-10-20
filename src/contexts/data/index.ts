@@ -901,7 +901,8 @@ export const CISC323HomePageAssignment1Data = [
 export const CISC323HomePageLab1Data = {
   urlToFile: 'https://drive.google.com/uc?export=download&id=1TWyWLsdkvCXJ_0MHBm7YVZze5AkAuYyk',
   labName: 'Lab 1',
-  gradeReceived: `${calcGrade(50, 50)}`
+  gradeReceived: `${calcGrade(50, 50)}`,
+  codeLink: 'tree/main/Lab1'
 };
 export const CISC323HomePageAssignment2Data = [
   {
@@ -923,7 +924,8 @@ export const CISC323HomePageAssignment2Data = [
 export const CISC323HomePageLab2Data = {
   urlToFile: 'https://drive.google.com/uc?export=download&id=1Scuag1Lx4nHSaGpQHbTn74AqVCh9-z7K',
   labName: 'Lab 2',
-  gradeReceived: `${calcGrade(50, 50)}`
+  gradeReceived: `${calcGrade(50, 50)}`,
+  codeLink: 'tree/main/Lab2'
 };
 export const CISC323HomePageAssignment3Data = [
   {
@@ -945,7 +947,8 @@ export const CISC323HomePageAssignment3Data = [
 export const CISC323HomePageLab3Data = {
   urlToFile: 'https://drive.google.com/uc?export=download&id=1sazoa_HS8DuGgRgk9ulsmVDLImiW9wx3',
   labName: 'Lab 3',
-  gradeReceived: `${calcGrade(50, 50)}`
+  gradeReceived: `${calcGrade(50, 50)}`,
+  codeLink: 'tree/main/Lab3'
 };
 export const CISC323HomePageAssignment4Data = [
   {
@@ -967,7 +970,8 @@ export const CISC323HomePageAssignment4Data = [
 export const CISC323HomePageLab4Data = {
   urlToFile: 'https://drive.google.com/uc?export=download&id=1TfnGSMNoKj98MSTa7phNso60rP8n7Grx',
   labName: 'Lab 4',
-  gradeReceived: `${calcGrade(50, 50)}`
+  gradeReceived: `${calcGrade(50, 50)}`,
+  codeLink: 'tree/main/Lab4'
 };
 export const CISC323HomePageAssignment5Data = [
   {
@@ -989,7 +993,8 @@ export const CISC323HomePageAssignment5Data = [
 export const CISC323HomePageLab5Data = {
   urlToFile: 'https://drive.google.com/uc?export=download&id=1gw-D8izyfCzZl_XSJyno0aonFSddVyXT',
   labName: 'Lab 5',
-  gradeReceived: `${calcGrade(50, 50)}`
+  gradeReceived: `${calcGrade(50, 50)}`,
+  codeLink: 'tree/main/Lab5'
 };
 
 export const CISC323HomePageAssignment6Data = [
@@ -1012,7 +1017,8 @@ export const CISC323HomePageAssignment6Data = [
 export const CISC323HomePageLab6Data = {
   urlToFile: 'https://drive.google.com/uc?export=download&id=1F2HW95Yob-3DtKjWaHRPdZmi-vBdgQCS',
   labName: 'Lab 6',
-  gradeReceived: `${calcGrade(50, 50)}`
+  gradeReceived: `${calcGrade(50, 50)}`,
+  codeLink: 'tree/main/Lab6'
 };
 export const CISC323HomePageAssignment7Data = [
   {
@@ -1033,8 +1039,9 @@ export const CISC323HomePageAssignment7Data = [
 ];
 export const CISC323HomePageLab7Data = {
   urlToFile: 'https://drive.google.com/uc?export=download&id=1_XV63Amgk15YIkpDtgUhbGHQAHaCxemL',
-  labName: 'Lab 7 - Final Project',
-  gradeReceived: `${calcGrade(100, 100)}`
+  labName: 'Lab 7',
+  gradeReceived: `${calcGrade(100, 100)}`,
+  codeLink: 'tree/main/FinalProject'
 };
 
 export const CISC323HomePageData = [

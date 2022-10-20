@@ -13,9 +13,11 @@ const CISC323HomePage: FC = () => {
         <title>CISC 323 - Homepage</title>
       </Helmet>
       <Template>
-        {CISC323HomePageData.map((a) => {
-          return <LabAssignment key={a.id} assignment={a.assignment} lab={a.lab} number={a.number} />;
-        })}
+        <>
+          {CISC323HomePageData.map((a) => {
+            return <LabAssignment key={a.id} assignment={a.assignment} lab={a.lab} number={a.number} />;
+          })}
+        </>
       </Template>
     </>
   );

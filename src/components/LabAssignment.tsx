@@ -11,6 +11,7 @@ const LabAssignment: FC<{
     name: string;
   }[];
   lab: {
+    codeLink: string;
     urlToFile: string;
     labName: string;
     gradeReceived: string;
@@ -34,6 +35,15 @@ const LabAssignment: FC<{
           <a href={lab.urlToFile} target='_blank' rel='noopener noreferrer'>
             <Icon name='lab' />
             {lab.labName}
+          </a>{' '}
+          {' - '}
+          <a
+            href={`http://https://github.com/eliasbnk/cisc323/${lab.codeLink}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Icon name='github' />
+            Code
           </a>{' '}
           {' - '}
           {lab.gradeReceived}
