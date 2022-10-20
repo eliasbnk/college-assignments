@@ -20,7 +20,7 @@ const CISW308Assignment5: FC = () => {
 
   useEffect(() => {
     getUserLocation();
-  }, [getUserLocation]);
+  }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleClick = (e: any, titleProps: any) => {
