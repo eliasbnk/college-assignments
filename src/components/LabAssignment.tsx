@@ -37,11 +37,7 @@ const LabAssignment: FC<{
             {lab.labName}
           </a>{' '}
           {' - '}
-          <a
-            href={`http://https://github.com/eliasbnk/cisc323/${lab.codeLink}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <a href={`https://github.com/eliasbnk/cisc323/${lab.codeLink}`} target='_blank' rel='noopener noreferrer'>
             <Icon name='github' />
             Code
           </a>{' '}
