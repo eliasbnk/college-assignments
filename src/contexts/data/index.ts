@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { SemanticCOLORS, SemanticICONS } from 'semantic-ui-react';
 import { calcGrade } from 'utils/gradeCalc';
 import { v4 as uuidv4 } from 'uuid';
@@ -1197,4 +1198,346 @@ export const CISW400Assignment1AssignmentData = [
     name: 'JavaScript code to display at the bottom of the page - the date the page was last modified.'
   },
   { id: uuidv4(), completed: true, name: 'List of links to the assignments you complete.' }
+];
+
+const CISC324Chapte7Question20 = `Consider the following shell script:
+
+echo -e "What is your favorite color? - - › \\c"
+read REPLY
+if ["$REPLY" = "red" -o "$REPLY" = "blue" ]
+then
+echo "The answer is red or blue."
+else
+echo "The answer is not fi red nor blue."
+fi
+
+What would be displayed if a user executes the program in question 20 and answered Blue when prompted?`;
+
+export const CISW327Chapter7ReviewQuestionsData = [
+  {
+    id: uuidv4(),
+    question:
+      'Because Standard Error and Standard Output represent the results of a command and Standard Input represents the input required for a command, only Standard Error and Standard Output can be redirected to/from a file.',
+
+    possibleAnswers: [
+      {
+        id: uuidv4(),
+        answer: 'True'
+      },
+      {
+        id: uuidv4(),
+        answer: 'False'
+      }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[1].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question:
+      'Before a user-defined variable can be used by processes that run in subshells, that variable must be _______________?',
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'imported' },
+      { id: uuidv4(), answer: 'validated by running the env command' },
+      { id: uuidv4(), answer: 'exported' },
+      { id: uuidv4(), answer: 'redirected to the BASH shell' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[2].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question: 'The alias command can be used to make a shortcut to a single command.',
+    possibleAnswers: [
+      {
+        id: uuidv4(),
+        answer: 'True'
+      },
+      {
+        id: uuidv4(),
+        answer: 'False'
+      }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[0].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question:
+      'Which of the following files is always executed immediately after any user logs in to a Linux system and receives a BASH shell?',
+
+    possibleAnswers: [
+      { id: uuidv4(), answer: '/etc/profile' },
+      { id: uuidv4(), answer: '~/.bash_profile' },
+      { id: uuidv4(), answer: '~/.bash_login' },
+      { id: uuidv4(), answer: '~/.profile' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[0].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question:
+      'Which command could you use to see a list of all environment and user-defined shell variables as well as their current values?',
+
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'ls /var' },
+      { id: uuidv4(), answer: 'env' },
+      { id: uuidv4(), answer: 'set' },
+      { id: uuidv4(), answer: 'echo' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[2].id];
+    }
+  },
+
+  {
+    id: uuidv4(),
+    question: 'Every if construct begins with if and must be terminated with _______________.',
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'end' },
+      { id: uuidv4(), answer: 'endif' },
+      { id: uuidv4(), answer: 'stop' },
+      { id: uuidv4(), answer: 'fi' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[3].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question:
+      'Which of the following will display the message welcome home if the cd /home/user1 command is successfully executed?',
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'cd /home/user1 && echo "welcome home"' },
+      { id: uuidv4(), answer: 'cat "welcome home" II cd /home/user1' },
+      { id: uuidv4(), answer: 'cd /home/user1 || cat "welcome home"' },
+      { id: uuidv4(), answer: 'echo "welcome home" && cd /home/user1' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[0].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question:
+      'The current value for the HOME variable is displayed by which of the following commands? (Choose all that apply.)',
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'echo HOME=' },
+      { id: uuidv4(), answer: 'echo ~' },
+      { id: uuidv4(), answer: 'echo $HOME' },
+      { id: uuidv4(), answer: 'echo ls HOME' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[1].id, this.possibleAnswers[2].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question: 'Which of the following file descriptor numbers represents stdout?',
+
+    possibleAnswers: [
+      { id: uuidv4(), answer: '2' },
+      { id: uuidv4(), answer: '0' },
+      { id: uuidv4(), answer: '1' },
+      { id: uuidv4(), answer: '3' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[2].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question: 'Which of the following operators reverses the meaning of a test statement?',
+    possibleAnswers: [
+      { id: uuidv4(), answer: '#!' },
+      { id: uuidv4(), answer: '-o' },
+      { id: uuidv4(), answer: '-a' },
+      { id: uuidv4(), answer: '!' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[3].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question:
+      'What would be the effect of using the alias command to make an alias for the date command named cat in honor of your favorite pet?',
+
+    possibleAnswers: [
+      {
+        id: uuidv4(),
+        answer:
+          'It cannot be done because there already is an environment variable cat associated with the cat command.'
+      },
+      { id: uuidv4(), answer: 'It cannot be done because there already is a command cat on the system.' },
+      {
+        id: uuidv4(),
+        answer:
+          'When you use the cat command at the command prompt with the intention of viewing a text file, the date appears instead.'
+      },
+      { id: uuidv4(), answer: 'There is no effect until the alias is imported because it is a user-declared variable.' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[2].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question: 'How do you indicate a comment line in a shell script?',
+
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'There are no comment lines in a shell script.' },
+      { id: uuidv4(), answer: 'Begin the line with #!.' },
+      { id: uuidv4(), answer: 'Begin the line with !.' },
+      { id: uuidv4(), answer: 'Begin the line with #.' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[3].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question:
+      'You have redirected Standard Error to a file called Errors. You view the contents of this file afterward and notice that there are six error messages. After repeating the procedure, you notice that there are only two error messages in this file. Why?',
+
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'After you open the file and view the contents, the contents are lost.' },
+      { id: uuidv4(), answer: 'The system generated different Standard Output.' },
+      {
+        id: uuidv4(),
+        answer:
+          'You did not append the Standard Error to the Error file, and as a result it was overwritten when the command was run a second time.'
+      },
+      {
+        id: uuidv4(),
+        answer:
+          'You must specify a new file each and every time you redirect because the system creates the specified file by default.'
+      }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[2].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question: 'The sed and awk commands are filter commands commonly used to form data within a pipe.',
+    possibleAnswers: [
+      {
+        id: uuidv4(),
+        answer: 'True'
+      },
+      {
+        id: uuidv4(),
+        answer: 'False'
+      }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[1].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question: 'What is wrong with the following command string: ls /etc/hosts › listofhostfile?',
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'Nothing is wrong with the command.' },
+      {
+        id: uuidv4(),
+        answer:
+          'The file descriptor was not declared; unless 1 for standard output or 2 for standard error is indicated, the command will fail.'
+      },
+      {
+        id: uuidv4(),
+        answer:
+          'The is command is one of the commands that cannot be used with redirection. You must use I to pipe instead.'
+      },
+      {
+        id: uuidv4(),
+        answer:
+          'The file listofhostfile will always only contain standard error because a file descriptor for was not declared.'
+      }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[0].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question:
+      'Which of the following is not necessarily generated by every command on the system? (Choose all that apply.)',
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'Standard Input' },
+      { id: uuidv4(), answer: 'Standard Deviation' },
+      { id: uuidv4(), answer: 'Standard Output' },
+      { id: uuidv4(), answer: 'Standard Error' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[0].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question: 'Which construct can be used in a shell script to read Standard Input and place it in a variable?',
+
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'read' },
+      { id: uuidv4(), answer: 'sum' },
+      { id: uuidv4(), answer: 'verify' },
+      { id: uuidv4(), answer: 'test' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[0].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question:
+      'A for construct is a loop construct that processes a specified list of objects.As a result, it is executed as long as there are remaining objects to process.',
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'True' },
+      { id: uuidv4(), answer: 'False' }
+    ],
+
+    myAnswer: function () {
+      return [this.possibleAnswers[0].id];
+    }
+  },
+  {
+    id: uuidv4(),
+    question: 'What does » accomplish when entered on the command line after a command ?',
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'It redirects both Standard Error and Standard Output to the same location.' },
+
+      { id: uuidv4(), answer: 'It does not accomplish anything.' },
+
+      { id: uuidv4(), answer: 'It redirects Standard Error and Standard Input to the same location.' },
+
+      { id: uuidv4(), answer: 'It appends Standard Output to a file.' }
+    ],
+
+    myAnswer: function () {
+      return [this.possibleAnswers[3].id];
+    }
+  },
+
+  {
+    id: uuidv4(),
+    question: CISC324Chapte7Question20,
+    possibleAnswers: [
+      { id: uuidv4(), answer: 'The answer is red or blue.' },
+
+      { id: uuidv4(), answer: 'The answer is not red nor blue.' },
+
+      { id: uuidv4(), answer: 'The code would cause an error.' },
+
+      { id: uuidv4(), answer: 'The answer is red or blue. The answer is not red nor blue.' }
+    ],
+    myAnswer: function () {
+      return [this.possibleAnswers[1].id];
+    }
+  }
 ];

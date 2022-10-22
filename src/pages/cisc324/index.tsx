@@ -1,2 +1,4 @@
 import CISC324HomePage from './CISC324-HomePage';
-export { CISC324HomePage };
+import CISC324Chapter7 from './CISC324-Chapter7';
+
+export { CISC324HomePage, CISC324Chapter7 };

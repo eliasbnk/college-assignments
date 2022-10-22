@@ -182,6 +182,14 @@ const Navbar: FC = () => {
                 as={Link}
                 to={'/cisw308/assignment-5'}
               />
+            ),
+            '/cisc324/chapter-7': (
+              <Menu.Item
+                name='Chapter 7'
+                active={activePage === '/cisc324/chapter-7'}
+                as={Link}
+                to={'/cisc324/chapter-7'}
+              />
             )
           }[pathName]
         }
