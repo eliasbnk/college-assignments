@@ -35,8 +35,8 @@ const CISW400Assignment7: FC = () => {
     setTheme(cookies.theme);
   }, [cookies.theme]);
 
-  const handleClick = async (value: string) => {
-    await setCookie('theme', value, { path: '/cisw400/assignment-7' });
+  const handleClick = (value: string) => {
+    setCookie('theme', value, { path: '/cisw400/assignment-7' });
   };
 
   const bgColor =
