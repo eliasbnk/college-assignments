@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from 'react';
 import type { FC } from 'react';
 import { Helmet } from 'react-helmet';
@@ -30,10 +28,6 @@ const CISW400Assignment7: FC = () => {
     } else {
       return setTheme(cookies.theme);
     }
-  }, []);
-
-  useEffect(() => {
-    setTheme(cookies.theme);
   }, [cookies]);
 
   const handleClick = (value: string) => {
@@ -67,7 +61,6 @@ const CISW400Assignment7: FC = () => {
                 color: ${fntColor};
             }
             .ui.form .field>label {
-
                color: ${fntColor};
             }
             #amount {
