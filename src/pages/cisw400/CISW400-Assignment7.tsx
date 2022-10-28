@@ -28,7 +28,7 @@ const CISW400Assignment7: FC = () => {
     } else {
       return setTheme(cookies.theme);
     }
-  }, [cookies]);
+  }, [cookies.theme, theme]);
 
   const handleClick = (value: string) => {
     setCookie('theme', value, { path: '/cisw400/assignment-7' });
