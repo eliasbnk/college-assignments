@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import type { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import Template from 'layout/Template';
-import { Button, Form, Header } from 'semantic-ui-react';
+import { Button, Form, Header, Icon } from 'semantic-ui-react';
 import {
   CISW400Assignment7AssignmentData,
   CISW400Assignment7AssignmentExtraCreditData,
@@ -25,20 +25,21 @@ const CISW400Assignment7: FC = () => {
 
   useEffect(() => {
     getAll('theme');
-    if (cookies.theme) return setTheme(cookies.theme);
-    setCookie('theme', '', { path: '/cisw400/assignment-7' });
+    if (!cookies.theme) {
+      setCookie('theme', '', { path: '/cisw400/assignment-7' });
+      setTheme('');
+    }
+    setTheme(cookies.theme);
   }, []);
 
   useEffect(() => {
     getAll('theme');
-    if (!cookies.theme) return setTheme('');
-    setTheme(cookies.theme);
-  }, [cookies.theme]);
+    setCookie('theme', theme, { path: '/cisw400/assignment-7' });
+  }, [theme]);
 
   const handleClick = (value: string) => {
-    setCookie('theme', value, { path: '/cisw400/assignment-7' });
+    setTheme(value);
   };
-
   const bgColor =
     {
       summer: summerTheme.body,
@@ -109,6 +110,7 @@ a:hover{
             <Header as='h2' id='theme-label' style={{ textAlign: 'left' }}>
               Choose a Theme:
             </Header>
+
             {CISW400Assignment7ThemeOptions.map((option) => {
               return (
                 <Button
@@ -122,6 +124,23 @@ a:hover{
               );
             })}
             <Button inverted circular icon='delete' color='red' onClick={() => handleClick('')} />
+            <Header as='h3'>
+              Theme set: {!cookies.theme ? 'default' : cookies.theme}
+              &nbsp;
+              <Icon
+                name={
+                  cookies.theme === 'winter'
+                    ? 'snowflake'
+                    : cookies.theme === 'fall'
+                    ? 'rain'
+                    : cookies.theme === 'spring'
+                    ? 'leaf'
+                    : cookies.theme === 'summer'
+                    ? 'sun'
+                    : 'adjust'
+                }
+              />
+            </Header>
           </div>
           <br />
           <br />
