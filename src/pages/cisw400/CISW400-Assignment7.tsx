@@ -125,7 +125,16 @@ a:hover{
             })}
             <Button inverted circular icon='delete' color='red' onClick={() => handleClick('')} />
             <Header as='h3'>
-              Theme set: {!cookies.theme ? 'default' : cookies.theme}
+              Theme set:{' '}
+              {cookies.theme === 'winter'
+                ? 'winter'
+                : cookies.theme === 'fall'
+                ? 'fall'
+                : cookies.theme === 'spring'
+                ? 'spring'
+                : cookies.theme === 'summer'
+                ? 'summer'
+                : 'default'}
               &nbsp;
               <Icon
                 name={
