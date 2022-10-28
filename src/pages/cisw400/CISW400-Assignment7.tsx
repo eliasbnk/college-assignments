@@ -27,11 +27,11 @@ const CISW400Assignment7: FC = () => {
     getAll('theme');
     if (cookies.theme) return setTheme(cookies.theme);
     setCookie('theme', '', { path: '/cisw400/assignment-7' });
-    setTheme('');
   }, []);
 
   useEffect(() => {
     getAll('theme');
+    if (!cookies.theme) return setTheme('');
     setTheme(cookies.theme);
   }, [cookies.theme]);
 
@@ -69,7 +69,7 @@ const CISW400Assignment7: FC = () => {
                color: ${fntColor};
             }
             #amount {
-                color: ${!theme ? `black` : `white`}
+                color: ${theme && `white`}
             }
 h1.ui.header{
   color: ${fntColor};
@@ -92,7 +92,7 @@ a:hover{
 }
 
             #theme-label{
-              color: ${!theme ? `black` : fntColor};
+              color: ${theme && fntColor};
 
             }
         `
