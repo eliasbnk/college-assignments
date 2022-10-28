@@ -139,7 +139,14 @@ h3.ui.header{
                     <Button disabled={(dirty && !isValid) || isSubmitting} type='submit'>
                       Calculate
                     </Button>
-                    <Button onClick={() => handleReset()}>Clear</Button>
+                    <Button
+                      onClick={() => {
+                        handleReset();
+                        setMonthlyPayment(0);
+                      }}
+                    >
+                      Clear
+                    </Button>
                   </Form>
                 </div>
               )}
