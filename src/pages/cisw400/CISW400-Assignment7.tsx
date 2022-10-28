@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import type { FC } from 'react';
 import { Helmet } from 'react-helmet';
@@ -20,18 +21,16 @@ import ExtraCredit from 'components/ExtraCredit';
 const CISW400Assignment7: FC = () => {
   const [theme, setTheme] = useState('');
   const [monthlyPayment, setMonthlyPayment] = useState(0);
-  const [cookies, setCookie] = useCookies(['theme']);
+  const [cookies, setCookie, getAll] = useCookies(['theme']);
 
   useEffect(() => {
-    if (cookies.theme === '') {
-      return setTheme('');
-    } else {
-      return setTheme(cookies.theme);
-    }
-  }, [cookies.theme, theme]);
+    getAll('theme');
+    if (!cookies.theme) return;
+    setTheme(cookies.theme);
+  }, [cookies.theme]);
 
-  const handleClick = (value: string) => {
-    setCookie('theme', value, { path: '/cisw400/assignment-7' });
+  const handleClick = async (value: string) => {
+    await setCookie('theme', value, { path: '/cisw400/assignment-7' });
   };
 
   const bgColor =
@@ -125,12 +124,11 @@ h3.ui.header{
                   (loanAmount * (interestRate / 1200)) / (1 - Math.pow(1 + interestRate / 1200, termLength * 12 * -1));
                 actions.setSubmitting(true);
                 setMonthlyPayment(+total.toFixed(2));
-                actions.resetForm();
                 actions.setSubmitting(false);
               }}
               validationSchema={Assignment7ValidationSchema}
             >
-              {({ handleSubmit, isSubmitting, isValid, dirty }) => (
+              {({ handleSubmit, isSubmitting, isValid, dirty, handleReset }) => (
                 <div>
                   <Form onSubmit={handleSubmit} style={{ maxWidth: '600px' }}>
                     <FormField name='loanAmount' label='Loan Amount' placeholder='Loan Amount' />
@@ -141,6 +139,7 @@ h3.ui.header{
                     <Button disabled={(dirty && !isValid) || isSubmitting} type='submit'>
                       Calculate
                     </Button>
+                    <Button onClick={() => handleReset()}>Clear</Button>
                   </Form>
                 </div>
               )}
