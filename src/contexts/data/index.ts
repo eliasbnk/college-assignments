@@ -205,7 +205,7 @@ export const CISW400HomePageAssignmentsData = [
     header: 'Assignment 7',
     description: 'Cookies',
     meta: `${calcGrade(0, 100)}`,
-    extra: 'locked'
+    extra: 'complete'
   },
   {
     id: 'cisw400-assignment-8',
@@ -1540,4 +1540,28 @@ export const CISW327Chapter7ReviewQuestionsData = [
       return [this.possibleAnswers[1].id];
     }
   }
+];
+
+export const CISW400Assignment7ThemeOptions: {
+  id: string;
+  value: string;
+  icon: SemanticICONS;
+  color: SemanticCOLORS;
+}[] = [
+  { id: uuidv4(), value: 'spring', icon: 'leaf', color: 'green' },
+  { id: uuidv4(), value: 'summer', icon: 'sun', color: 'yellow' },
+  { id: uuidv4(), value: 'fall', icon: 'rain', color: 'orange' },
+  { id: uuidv4(), value: 'winter', icon: 'snowflake', color: 'teal' }
+];
+
+export const CISW400Assignment7AssignmentData = [
+  {
+    id: uuidv4(),
+    completed: true,
+    name: 'Theme Changer - save theme preference to Cookies.'
+  }
+];
+
+export const CISW400Assignment7AssignmentExtraCreditData = [
+  { id: uuidv4(), completed: true, name: 'Create an Online Mortgage Calculator' }
 ];

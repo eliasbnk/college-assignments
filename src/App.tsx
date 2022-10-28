@@ -18,6 +18,7 @@ background-color: lightgray; box-sizing: border-box;
   max-height: 100vh; }`}</style>
         <title>Home</title>
       </Helmet>
+
       <UserLocationProvider>
         <Routing />
       </UserLocationProvider>

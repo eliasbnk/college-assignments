@@ -15,7 +15,7 @@ const FormField: FC<FieldAttributes<any>> = ({ ...props }) => {
   const errorText = meta.error && meta.touched ? meta.error : null;
   return (
     <Field
-      {...(field.name === 'email' ? { autoFocus: true } : { autoFocus: false })}
+      {...(field.name === 'email' || field.name === 'loanAmount' ? { autoFocus: true } : { autoFocus: false })}
       autoComplete={props.autoComplete}
       label={props.label}
       placeholder={props.placeholder}
@@ -25,6 +25,18 @@ const FormField: FC<FieldAttributes<any>> = ({ ...props }) => {
       as={Form.Input}
       {...field}
       error={errorText}
+      {...(field.name === 'loanAmount'
+        ? {
+            icon: 'dollar',
+            iconPosition: 'left'
+          }
+        : field.name === 'interestRate'
+        ? {
+            icon: 'percent'
+          }
+        : field.name === 'termLength'
+        ? { iconPosition: 'left', icon: 'calendar outline' }
+        : {})}
     />
   );
 };

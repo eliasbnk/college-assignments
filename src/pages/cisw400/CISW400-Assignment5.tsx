@@ -8,7 +8,7 @@ import { Button, Form } from 'semantic-ui-react';
 import Assignment from 'components/Assignment';
 import Submissions from 'components/Submissions';
 import { CISW400Assignment5AssignmentData } from 'contexts/data';
-import { initialValues, validationSchema } from 'utils/form';
+import { Assignment5InitialValues, Assignment5ValidationSchema } from 'utils/form';
 import FormField from '../../components/FormField';
 
 const CISW400Assignment5: FC = () => {
@@ -21,7 +21,7 @@ const CISW400Assignment5: FC = () => {
         <Assignment assignment={CISW400Assignment5AssignmentData} />
         <Submissions>
           <Formik
-            initialValues={initialValues}
+            initialValues={Assignment5InitialValues}
             onSubmit={(values, actions) => {
               actions.setSubmitting(true);
               alert(`
@@ -31,7 +31,7 @@ const CISW400Assignment5: FC = () => {
               actions.resetForm();
               actions.setSubmitting(false);
             }}
-            validationSchema={validationSchema}
+            validationSchema={Assignment5ValidationSchema}
           >
             {({ handleSubmit, isSubmitting, isValid, dirty }) => (
               <div>

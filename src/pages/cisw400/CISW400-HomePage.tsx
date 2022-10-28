@@ -6,10 +6,11 @@ import { Card, Icon } from 'semantic-ui-react';
 import Template from 'layout/Template';
 import Title from 'components/Title';
 import { CISW400HomePageAssignmentsData } from 'contexts/data';
+import { CookiesProvider } from 'react-cookie';
 
 const CISW400HomePage: FC = () => {
   return (
-    <>
+    <CookiesProvider>
       <Helmet>
         <title>CISW 400 - Homepage</title>
       </Helmet>
@@ -46,7 +47,7 @@ const CISW400HomePage: FC = () => {
           </Card.Group>
         </div>
       </Template>
-    </>
+    </CookiesProvider>
   );
 };
 

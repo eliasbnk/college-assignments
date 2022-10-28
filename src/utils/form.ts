@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-interface MyFormValues {
+interface Assignment5FormValues {
   email: string;
   address1: string;
   address2: string;
@@ -9,7 +9,13 @@ interface MyFormValues {
   zip: string;
 }
 
-export const validationSchema = yup.object({
+interface Assignment7FormValues {
+  loanAmount: number;
+  termLength: number;
+  interestRate: number;
+}
+
+export const Assignment5ValidationSchema = yup.object({
   email: yup.string().email('please enter a valid e-mail address.').required('e-mail is required.'),
   address1: yup.string().required('address is required.'),
   address2: yup.string(),
@@ -32,11 +38,35 @@ export const validationSchema = yup.object({
     .max(5, 'zip code must be exactly 5 digits.')
 });
 
-export const initialValues: MyFormValues = {
+export const Assignment5InitialValues: Assignment5FormValues = {
   email: '',
   address1: '',
   address2: '',
   city: '',
   state: '',
   zip: ''
+};
+
+export const Assignment7ValidationSchema = yup.object({
+  loanAmount: yup
+    .number()
+    .typeError('you must specify a number')
+    .min(1, 'number must be greater than 0')
+    .required('loan amount is required.'),
+  termLength: yup
+    .number()
+    .typeError('you must specify a number')
+    .min(1, 'number must be greater than 0')
+    .required('term length is required.'),
+  interestRate: yup
+    .number()
+    .typeError('you must specify a number')
+    .min(1, 'number must be greater than 0')
+    .required('interest rate is required')
+});
+
+export const Assignment7InitialValues: Assignment7FormValues = {
+  loanAmount: 0,
+  termLength: 0,
+  interestRate: 0
 };
