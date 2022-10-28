@@ -24,10 +24,15 @@ const CISW400Assignment7: FC = () => {
   const [cookies, setCookie, getAll] = useCookies(['theme']);
 
   useEffect(() => {
+    setCookie('theme', '', { path: '/cisw400/assignment-7' });
+  }, []);
+
+  useEffect(() => {
     getAll('theme');
     if (cookies.theme === '') return setTheme('');
     setTheme(cookies.theme);
   }, [cookies.theme]);
+
   const handleClick = async (value: string) => {
     await setCookie('theme', value, { path: '/cisw400/assignment-7' });
   };
