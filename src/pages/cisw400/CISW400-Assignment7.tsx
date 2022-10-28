@@ -78,6 +78,12 @@ h3.ui.header{
   font-size: 1.2rem;
   color: black;
 }
+a{
+  color: ${theme && `white`}
+}
+a:hover{
+  color: ${theme && `black`}
+}
 
             #theme-label{
               color: ${!theme ? `black` : fntColor};
@@ -128,7 +134,7 @@ h3.ui.header{
               }}
               validationSchema={Assignment7ValidationSchema}
             >
-              {({ handleSubmit, isSubmitting, isValid, dirty, handleReset }) => (
+              {({ handleSubmit, isSubmitting, isValid, dirty, handleReset, validateForm }) => (
                 <div>
                   <Form onSubmit={handleSubmit} style={{ maxWidth: '600px' }}>
                     <FormField name='loanAmount' label='Loan Amount' placeholder='Loan Amount' />
@@ -142,6 +148,7 @@ h3.ui.header{
                     <Button
                       onClick={() => {
                         handleReset();
+                        validateForm(false);
                         setMonthlyPayment(0);
                       }}
                     >
