@@ -25,10 +25,9 @@ const CISW400Assignment7: FC = () => {
 
   useEffect(() => {
     getAll('theme');
-    if (!cookies.theme) return;
+    if (cookies.theme === '') return setTheme('');
     setTheme(cookies.theme);
   }, [cookies.theme]);
-
   const handleClick = async (value: string) => {
     await setCookie('theme', value, { path: '/cisw400/assignment-7' });
   };
@@ -115,6 +114,7 @@ a:hover{
                 />
               );
             })}
+            <Button inverted circular icon='delete' color='red' onClick={() => handleClick('')} />
           </div>
           <br />
           <br />
@@ -134,7 +134,7 @@ a:hover{
               }}
               validationSchema={Assignment7ValidationSchema}
             >
-              {({ handleSubmit, isSubmitting, isValid, dirty, handleReset, validateForm }) => (
+              {({ handleSubmit, isSubmitting, isValid, dirty, handleReset, values }) => (
                 <div>
                   <Form onSubmit={handleSubmit} style={{ maxWidth: '600px' }}>
                     <FormField name='loanAmount' label='Loan Amount' placeholder='Loan Amount' />
@@ -142,13 +142,23 @@ a:hover{
                       <FormField name='termLength' label='Loan Term (years)' placeholder='Loan Term' />
                       <FormField name='interestRate' label='Interest Rate' placeholder='Interest Rate' />
                     </Form.Group>
-                    <Button disabled={(dirty && !isValid) || isSubmitting} type='submit'>
+                    <Button
+                      disabled={
+                        values.interestRate === 0 ||
+                        values.loanAmount === 0 ||
+                        values.termLength === 0 ||
+                        (dirty && !isValid) ||
+                        isSubmitting
+                      }
+                      type='submit'
+                    >
                       Calculate
                     </Button>
                     <Button
+                      disabled={!dirty}
+                      type='reset'
                       onClick={() => {
                         handleReset();
-                        validateForm(false);
                         setMonthlyPayment(0);
                       }}
                     >
