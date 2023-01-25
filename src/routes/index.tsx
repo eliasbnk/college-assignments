@@ -27,7 +27,11 @@ import { CISC323HomePage } from 'pages/cisc323';
 import { CISS300HomePage } from 'pages/ciss300';
 import { CISC310HomePage } from 'pages/cisc310';
 import { CISW327HomePage } from 'pages/cisw327';
-import { CISC324Chapter7, CISC324HomePage } from 'pages/cisc324';
+import { CISC324HomePage } from 'pages/cisc324';
+import { DDSN331CiB1, DDSN331CP1, DDSN331HomePage, DDSN331Lab1 } from 'pages/ddsn331';
+import { DDSN360HomePage } from 'pages/ddsn360';
+import { CISW306HomePage } from 'pages/cisw306';
+import { CISP301HomePage, CISP301Homework1, CISP301ICE1, CISP301Lab1 } from 'pages/cisp301';
 
 const Routing: FC = () => {
   return (
@@ -37,7 +41,6 @@ const Routing: FC = () => {
         <Route path='*' element={<PageNotFound />} />
         <Route path='/cisc323' element={<CISC323HomePage />} />
         <Route path='/cisc324' element={<CISC324HomePage />} />
-        <Route path='/cisc324/chapter-7' element={<CISC324Chapter7 />} />
         <Route path='/cisc310' element={<CISC310HomePage />} />
         <Route path='/ciss300' element={<CISS300HomePage />} />
         <Route path='/cisc305' element={<CISC305HomePage />} />
@@ -59,6 +62,16 @@ const Routing: FC = () => {
         <Route path='/cisw400/assignment-7' element={<CISW400Assignment7 />} />
         <Route path='/cisw400/assignment-8' element={<CISW400Assignment8 />} />
         <Route path='/cisw400/assignment-9' element={<CISW400Assignment9 />} />
+        <Route path='/ddsn331' element={<DDSN331HomePage />} />
+        <Route path='/ddsn331/lab-1' element={<DDSN331Lab1 />} />
+        <Route path='/ddsn331/cp-1' element={<DDSN331CP1 />} />
+        <Route path='/ddsn331/cib-1' element={<DDSN331CiB1 />} />
+        <Route path='/ddsn360' element={<DDSN360HomePage />} />
+        <Route path='/cisw306' element={<CISW306HomePage />} />
+        <Route path='/cisp301' element={<CISP301HomePage />} />
+        <Route path='/cisp301/lab-1' element={<CISP301Lab1 />} />
+        <Route path='/cisp301/ice-1' element={<CISP301ICE1 />} />
+        <Route path='/cisp301/hw-1' element={<CISP301Homework1 />} />
       </Routes>
     </Router>
   );

@@ -14,7 +14,11 @@ const CISW327HomePage: FC = () => {
       </Helmet>
       <Template>
         <Header as='h1' style={{ textAlign: 'center' }}>
-          Coming Soon
+          Asignments hosted on{' '}
+          <a href='https://eliasbnk.github.io/cisw327/' rel='noopener noreferrer' target='_blank'>
+            Github pages
+          </a>
+          .
         </Header>
       </Template>
     </>

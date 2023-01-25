@@ -33,8 +33,8 @@ const CISW400Assignment7: FC = () => {
   }, []);
 
   useEffect(() => {
-    getAll('theme');
     setCookie('theme', theme, { path: '/cisw400/assignment-7' });
+    getAll('theme');
   }, [theme]);
 
   const handleClick = (value: string) => {
@@ -70,6 +70,9 @@ const CISW400Assignment7: FC = () => {
                color: ${fntColor};
             }
             #amount {
+                color: ${theme && `white`}
+            }
+            #theme {
                 color: ${theme && `white`}
             }
 h1.ui.header{
@@ -110,7 +113,6 @@ a:hover{
             <Header as='h2' id='theme-label' style={{ textAlign: 'left' }}>
               Choose a Theme:
             </Header>
-
             {CISW400Assignment7ThemeOptions.map((option) => {
               return (
                 <Button
@@ -125,7 +127,7 @@ a:hover{
             })}
             <Button inverted circular icon='delete' color='red' onClick={() => handleClick('')} />
             <Header as='h3'>
-              Theme set:{' '}
+              Theme set: &nbsp;
               {cookies.theme === 'winter'
                 ? 'winter'
                 : cookies.theme === 'fall'

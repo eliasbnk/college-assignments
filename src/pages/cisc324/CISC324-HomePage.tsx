@@ -4,21 +4,9 @@ import type { FC } from 'react';
 import { Helmet } from 'react-helmet';
 
 import Template from 'layout/Template';
-import { Card, Icon } from 'semantic-ui-react';
-import { calcGrade } from 'utils/gradeCalc';
-import Title from 'components/Title';
-import { Link } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 
-const assignments = [
-  {
-    id: 'cisc324-chapter-7',
-    link: '/cisc324/chapter-7',
-    header: 'Chapter 7',
-    description: 'Working with the Bash Shell',
-    meta: `${calcGrade(0, 100)}`,
-    extra: 'complete'
-  }
-];
+import Title from 'components/Title';
 
 const CISC324HomePage: FC = () => {
   return (
@@ -28,36 +16,31 @@ const CISC324HomePage: FC = () => {
       </Helmet>
       <Template>
         <Title>ASSIGNMENTS</Title>
-        <Card.Group fluid centered>
-          {assignments.map((assignment) => {
-            return (
-              <Card
-                key={assignment.id}
-                {...(assignment.extra === 'complete'
-                  ? {
-                      as: Link,
-                      to: assignment.link
-                    }
-                  : null)}
+        <div style={{ textAlign: 'center', fontSize: '1.5em' }}>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li style={{ marginTop: '15px' }}>
+              <a
+                href='https://github.com/eliasbnk/cisc324/tree/main/Chapter7'
+                target='_blank'
+                rel='noopener noreferrer'
               >
-                <Card.Content>
-                  <Card.Header>{assignment.header}</Card.Header>
-                  <Card.Meta>{assignment.meta}</Card.Meta>
-                  <Card.Description>{assignment.description}</Card.Description>
-                  <Card.Content extra align='right'>
-                    {assignment.extra === 'complete' ? (
-                      <Icon name='check circle' color='green' />
-                    ) : (
-                      <Icon name='lock' color='red' />
-                    )}
-                  </Card.Content>
-                </Card.Content>
-              </Card>
-            );
-          })}
-        </Card.Group>
+                <Icon name='github' />
+                Coding Exercises
+              </a>
+            </li>
+            <li style={{ marginTop: '15px' }}>
+              <a
+                href='https://docs.google.com/uc?id=1n6IWcvfdmg19eiD0JSnEFulhV6iMOt18&export=download'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Icon name='file' />
+                Review Questions
+              </a>
+            </li>
+          </ul>
+        </div>
       </Template>
-      ;
     </>
   );
 };

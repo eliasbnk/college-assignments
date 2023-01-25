@@ -75,7 +75,7 @@ export const classesData: {
     header: 'CISC 310',
     description: 'Intro to Computer Information Science',
     meta: 'SCC - Bair - Fall 2022',
-    complete: 'in-progress',
+    complete: 'complete',
     college: 'SCC',
     iconName: 'microchip',
     iconColor: 'grey'
@@ -97,12 +97,22 @@ export const classesData: {
     header: 'CISC 324',
     description: 'Intermediate Linux Operating System',
     meta: 'SCC - Osman - Fall 2022',
-    complete: 'in-progress',
+    complete: 'complete',
     college: 'SCC',
     iconName: 'terminal',
     iconColor: 'red'
   },
-
+  {
+    id: 'cisw-306',
+    link: '/cisw306',
+    header: 'CISW 306',
+    description: 'Intro to Web Page Creation and Web A11y',
+    meta: 'SCC - Little - Spring 2023',
+    complete: 'in-progress',
+    college: 'SCC',
+    iconName: 'universal access',
+    iconColor: 'blue'
+  },
   {
     id: 'cisw-308',
     link: '/cisw308',
@@ -120,10 +130,10 @@ export const classesData: {
     header: 'CISW 327',
     description: 'Intro to Web Dev coding HTML and CSS',
     meta: 'SCC - Little - Fall 2022',
-    complete: 'in-progress',
+    complete: 'complete',
     college: 'SCC',
     iconName: 'code',
-    iconColor: 'teal'
+    iconColor: 'pink'
   },
   {
     id: 'cisw-400',
@@ -131,11 +141,33 @@ export const classesData: {
     header: 'CISW 400',
     description: 'Client Web Scripting',
     meta: 'CRC - Fishman - Fall 2022',
-    complete: 'in-progress',
+    complete: 'complete',
     college: 'CRC',
 
     iconName: 'js',
     iconColor: 'yellow'
+  },
+  {
+    id: 'ddsn-331',
+    link: '/ddsn331',
+    header: 'DDSN 331',
+    description: 'Digital Imaging I',
+    meta: 'SCC - Crail - Spring 2023',
+    complete: 'in-progress',
+    college: 'SCC',
+    iconName: 'images',
+    iconColor: 'teal'
+  },
+  {
+    id: 'ddsn-360',
+    link: '/ddsn360',
+    header: 'DDSN 360',
+    description: 'User Interface Design',
+    meta: 'SCC - Button - Spring 2023',
+    complete: 'in-progress',
+    college: 'SCC',
+    iconName: 'sitemap',
+    iconColor: 'violet'
   },
   {
     id: 'ciss-300',
@@ -143,10 +175,21 @@ export const classesData: {
     header: 'CISS 300',
     description: 'Intro to Information Systems Security',
     meta: 'SCC - Richardson - Sequeira - Fall 2022',
-    complete: 'in-progress',
+    complete: 'complete',
     college: 'SCC',
     iconName: 'shield alternate',
     iconColor: 'green'
+  },
+  {
+    id: 'cisp-301',
+    link: '/cisp301',
+    header: 'CISP 301',
+    description: 'Algorithm Design and Implementation',
+    meta: 'SCC - Krofchok - Spring 2023',
+    complete: 'in-progress',
+    college: 'SCC',
+    iconName: 'chart area',
+    iconColor: 'purple'
   }
 ];
 
@@ -206,22 +249,6 @@ export const CISW400HomePageAssignmentsData = [
     description: 'Cookies',
     meta: `${calcGrade(0, 100)}`,
     extra: 'complete'
-  },
-  {
-    id: 'cisw400-assignment-8',
-    link: '/cisw400/assignment-8',
-    header: 'Assignment 8',
-    description: 'AJAX Article Review',
-    meta: `${calcGrade(0, 50)}`,
-    extra: 'locked'
-  },
-  {
-    id: 'cisw400-assignment-9',
-    link: '/cisw400/assignment-9',
-    header: 'Assignment 9',
-    description: 'Cross-Site Scripting',
-    meta: `${calcGrade(0, 25)}`,
-    extra: 'locked'
   }
 ];
 
@@ -1558,10 +1585,10 @@ export const CISW400Assignment7AssignmentData = [
   {
     id: uuidv4(),
     completed: true,
-    name: 'Theme Changer - save theme preference to Cookies.'
+    name: 'Theme Changer - offer at least 3 diffrent themes, and save user theme preference to Cookies.'
   }
 ];
 
 export const CISW400Assignment7AssignmentExtraCreditData = [
-  { id: uuidv4(), completed: true, name: 'Create an Online Mortgage Calculator' }
+  { id: uuidv4(), completed: true, name: 'Create a Mortgage Calculator.' }
 ];

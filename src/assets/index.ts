@@ -46,6 +46,10 @@ import chImage3 from './ch3.jpg';
 import chImage4 from './ch4.jpg';
 import chImage5 from './ch5.jpg';
 import chImage6 from './ch6.jpeg';
+import greetingCard1 from './Babenko_CP1Final.jpg';
+import greetingCard2 from './Greeting_Card.jpg';
+import iceBreaker from './Babenko_IceBreaker.jpg';
+import cib1 from './CIB1_Babenko.jpg';
 
 export {
   TacoBell,
@@ -95,5 +99,9 @@ export {
   chImage3,
   chImage4,
   chImage5,
-  chImage6
+  chImage6,
+  greetingCard1,
+  greetingCard2,
+  iceBreaker,
+  cib1
 };

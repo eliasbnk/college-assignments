@@ -31,6 +31,14 @@ const Navbar: FC = () => {
       setURL('CISC 324');
     } else if (window.location.href.indexOf('cisw327') > -1) {
       setURL('CISW 327');
+    } else if (window.location.href.indexOf('cisw306') > -1) {
+      setURL('CISW 306');
+    } else if (window.location.href.indexOf('cisp301') > -1) {
+      setURL('CISP 301');
+    } else if (window.location.href.indexOf('ddsn331') > -1) {
+      setURL('DDSN 331');
+    } else if (window.location.href.indexOf('ddsn360') > -1) {
+      setURL('DDSN 360');
     }
 
     setActivePage(pathName);
@@ -60,6 +68,14 @@ const Navbar: FC = () => {
           <Menu.Item name='CISW 327' active={activePage === '/cisw327'} as={Link} to={'/cisw327'} />
         ) : url === 'CISC 324' ? (
           <Menu.Item name='CISC 324' active={activePage === '/cisc324'} as={Link} to={'/cisc324'} />
+        ) : url === 'CISW 306' ? (
+          <Menu.Item name='CISW 306' active={activePage === '/cisw306'} as={Link} to={'/cisw306'} />
+        ) : url === 'CISP 301' ? (
+          <Menu.Item name='CISP 301' active={activePage === '/cisp301'} as={Link} to={'/cisp301'} />
+        ) : url === 'DDSN 331' ? (
+          <Menu.Item name='DDSN 331' active={activePage === '/ddsn331'} as={Link} to={'/ddsn331'} />
+        ) : url === 'DDSN 360' ? (
+          <Menu.Item name='DDSN 360' active={activePage === '/ddsn360'} as={Link} to={'/ddsn360'} />
         ) : null}
         {
           {
@@ -189,6 +205,34 @@ const Navbar: FC = () => {
                 active={activePage === '/cisc324/chapter-7'}
                 as={Link}
                 to={'/cisc324/chapter-7'}
+              />
+            ),
+            '/ddsn331/cib-1': (
+              <Menu.Item name='Chapter 1' active={activePage === '/ddsn331/cib-1'} as={Link} to={'/ddsn331/cib-1'} />
+            ),
+            '/ddsn331/lab-1': (
+              <Menu.Item name='Lab 1' active={activePage === '/ddsn331/lab-1'} as={Link} to={'/ddsn331/lab-1'} />
+            ),
+            '/ddsn331/cp-1': (
+              <Menu.Item
+                name='Creative Project 1'
+                active={activePage === '/ddsn331/cp-1'}
+                as={Link}
+                to={'/ddsn331/cp-1'}
+              />
+            ),
+            '/cisp301/hw-1': (
+              <Menu.Item name='Homework 1' active={activePage === '/cisp301/hw-1'} as={Link} to={'/cisp301/hw-1'} />
+            ),
+            '/cisp301/lab-1': (
+              <Menu.Item name='Lab 1' active={activePage === '/cisp301/lab-1'} as={Link} to={'/cisp301/lab-1'} />
+            ),
+            '/cisp301/ice-1': (
+              <Menu.Item
+                name='In-class Exercise 1'
+                active={activePage === '/cisp301/ice-1'}
+                as={Link}
+                to={'/cisp301/ice-1'}
               />
             )
           }[pathName]
