@@ -50,6 +50,7 @@ import greetingCard1 from './Babenko_CP1Final.jpg';
 import greetingCard2 from './Greeting_Card.jpg';
 import iceBreaker from './Babenko_IceBreaker.jpg';
 import cib1 from './CIB1_Babenko.jpg';
+import cib1start from './Start.jpg';
 
 export {
   TacoBell,
@@ -103,5 +104,6 @@ export {
   greetingCard1,
   greetingCard2,
   iceBreaker,
-  cib1
+  cib1,
+  cib1start
 };
