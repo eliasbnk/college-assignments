@@ -33,6 +33,22 @@ const assignments = [
     description: 'Greeting Card',
     meta: `${calcGrade(0, 100)}`,
     extra: 'complete'
+  },
+  {
+    id: 'ddsn331-cib-2',
+    link: '/ddsn331/cib-2',
+    header: 'Adobe PS Classroom in a Book',
+    description: 'Chapter 2',
+    meta: `${calcGrade(0, 100)}`,
+    extra: 'complete'
+  },
+  {
+    id: 'ddsn331-cib-2-ec',
+    link: '/ddsn331/cib-2-ec',
+    header: 'Adobe PS Classroom in a Book',
+    description: 'Chapter 2 Extra Credit',
+    meta: `${calcGrade(0, 100)}`,
+    extra: 'complete'
   }
 ];
 

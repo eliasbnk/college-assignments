@@ -12,8 +12,10 @@ const DDSN331Lab1: FC = () => {
         <title>DDSN 331 - Lab 1</title>
       </Helmet>
       <Template>
-        <Header as='h1'>Scratch &quot;Doodle&quot; Art</Header>
-        <Image src={iceBreaker} height='500' />
+        <div style={{ textAlign: 'center' }}>
+          <Header as='h1'>Scratch &quot;Doodle&quot; Art</Header>
+          <Image style={{ marginLeft: 'auto', marginRight: 'auto' }} src={iceBreaker} height='500' />
+        </div>
       </Template>
     </>
   );

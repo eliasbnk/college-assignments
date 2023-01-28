@@ -234,6 +234,17 @@ const Navbar: FC = () => {
                 as={Link}
                 to={'/cisp301/ice-1'}
               />
+            ),
+            '/ddsn331/cib-2': (
+              <Menu.Item name='Chapter 2' active={activePage === '/ddsn331/cib-2'} as={Link} to={'/ddsn331/cib-2'} />
+            ),
+            '/ddsn331/cib-2-ec': (
+              <Menu.Item
+                name='Chapter 2 Extra Credit'
+                active={activePage === '/ddsn331/cib-2-ec'}
+                as={Link}
+                to={'/ddsn331/cib-2-ec'}
+              />
             )
           }[pathName]
         }

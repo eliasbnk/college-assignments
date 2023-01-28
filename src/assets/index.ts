@@ -46,11 +46,16 @@ import chImage3 from './ch3.jpg';
 import chImage4 from './ch4.jpg';
 import chImage5 from './ch5.jpg';
 import chImage6 from './ch6.jpeg';
-import greetingCard1 from './Babenko_CP1Final.jpg';
-import greetingCard2 from './Greeting_Card.jpg';
+import greetingCard3 from './Babenko_CP1Final2.jpg';
+import greetingCard2 from './Babenko_CP1Final.jpg';
+import greetingCard1 from './Greeting_Card.jpg';
 import iceBreaker from './Babenko_IceBreaker.jpg';
 import cib1 from './CIB1_Babenko.jpg';
 import cib1start from './Start.jpg';
+import cib2 from './CIB2_Babenko.jpg';
+import cib2start from './02Start.jpg';
+import cib2ecstart from './bike.jpg';
+import cib2ec from './CIB2ExtraCredit_Babenko.jpg';
 
 export {
   TacoBell,
@@ -105,5 +110,10 @@ export {
   greetingCard2,
   iceBreaker,
   cib1,
-  cib1start
+  cib1start,
+  cib2,
+  cib2start,
+  cib2ec,
+  cib2ecstart,
+  greetingCard3
 };
