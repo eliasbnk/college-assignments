@@ -9,7 +9,7 @@ const DDSN331CiB2EC: FC = () => {
   return (
     <>
       <Helmet>
-        <title>DDSN 331 - CiB 1</title>
+        <title>DDSN 331 - CiB 2 EC</title>
       </Helmet>
       <Template>
         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
