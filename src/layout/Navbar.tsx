@@ -245,6 +245,9 @@ const Navbar: FC = () => {
                 as={Link}
                 to={'/ddsn331/cib-2-ec'}
               />
+            ),
+            '/ddsn331/lab-2': (
+              <Menu.Item name='Lab 2' active={activePage === '/ddsn331/lab-2'} as={Link} to={'/ddsn331/lab-2'} />
             )
           }[pathName]
         }

@@ -56,6 +56,8 @@ import cib2 from './CIB2_Babenko.jpg';
 import cib2start from './02Start.jpg';
 import cib2ecstart from './bike.jpg';
 import cib2ec from './CIB2ExtraCredit_Babenko.jpg';
+import lab2start from './lab2start.jpg';
+import lab2 from './Babenko_w2editing.jpg';
 
 export {
   TacoBell,
@@ -115,5 +117,7 @@ export {
   cib2start,
   cib2ec,
   cib2ecstart,
-  greetingCard3
+  greetingCard3,
+  lab2start,
+  lab2
 };

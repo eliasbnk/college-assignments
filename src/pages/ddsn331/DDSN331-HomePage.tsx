@@ -49,6 +49,14 @@ const assignments = [
     description: 'Chapter 2 Extra Credit',
     meta: `${calcGrade(0, 100)}`,
     extra: 'complete'
+  },
+  {
+    id: 'ddsn331-lab-2',
+    link: '/ddsn331/lab-2',
+    header: 'Lab 2',
+    description: 'Basic Photo Editing',
+    meta: `${calcGrade(0, 100)}`,
+    extra: 'complete'
   }
 ];
 

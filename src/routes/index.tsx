@@ -28,7 +28,15 @@ import { CISS300HomePage } from 'pages/ciss300';
 import { CISC310HomePage } from 'pages/cisc310';
 import { CISW327HomePage } from 'pages/cisw327';
 import { CISC324HomePage } from 'pages/cisc324';
-import { DDSN331CiB1, DDSN331CP1, DDSN331HomePage, DDSN331Lab1, DDSN331CiB2, DDSN331CiB2EC } from 'pages/ddsn331';
+import {
+  DDSN331CiB1,
+  DDSN331CP1,
+  DDSN331HomePage,
+  DDSN331Lab1,
+  DDSN331CiB2,
+  DDSN331CiB2EC,
+  DDSN331Lab2
+} from 'pages/ddsn331';
 import { DDSN360HomePage } from 'pages/ddsn360';
 import { CISW306HomePage } from 'pages/cisw306';
 import { CISP301HomePage, CISP301Homework1, CISP301ICE1, CISP301Lab1 } from 'pages/cisp301';
@@ -67,7 +75,8 @@ const Routing: FC = () => {
         <Route path='/ddsn331/cp-1' element={<DDSN331CP1 />} />
         <Route path='/ddsn331/cib-1' element={<DDSN331CiB1 />} />
         <Route path='/ddsn331/cib-2' element={<DDSN331CiB2 />} />
-        <Route path='/ddsn331/cib-2-ec' element={<DDSN331CiB2EC />} />;
+        <Route path='/ddsn331/cib-2-ec' element={<DDSN331CiB2EC />} />
+        <Route path='/ddsn331/lab-2' element={<DDSN331Lab2 />} />
         <Route path='/ddsn360' element={<DDSN360HomePage />} />
         <Route path='/cisw306' element={<CISW306HomePage />} />
         <Route path='/cisp301' element={<CISP301HomePage />} />
