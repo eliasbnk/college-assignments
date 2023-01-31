@@ -24,7 +24,7 @@ const CISS300HomePage: FC = () => {
               <img
                 style={{ maxWidth: '100%' }}
                 src='https://tryhackme-badges.s3.amazonaws.com/w1793796.png'
-                alt='TryHackMe'
+                alt='TryHackMe progress badge'
               />
             </a>
           </div>

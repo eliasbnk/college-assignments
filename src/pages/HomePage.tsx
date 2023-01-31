@@ -17,7 +17,7 @@ const HomePage: FC = () => {
       </Helmet>
       <Template>
         <Title>CLASSES</Title>
-        <Card.Group fluid centered>
+        <Card.Group role='group' fluid centered>
           {classesData.map((collegeClass) => {
             return (
               <Card key={collegeClass.id} as={Link} to={collegeClass.link}>
@@ -28,9 +28,9 @@ const HomePage: FC = () => {
                 />
                 <Card.Content>
                   <Card.Header>{collegeClass.header}</Card.Header>
-                  <Card.Meta>{collegeClass.meta}</Card.Meta>
+                  <Card.Meta style={{ color: '#747474' }}>{collegeClass.meta}</Card.Meta>
                   <Card.Description>{collegeClass.description}</Card.Description>
-                  <Card.Content extra align='right'>
+                  <Card.Content extra style={{ textAlign: 'right' }}>
                     <Icon name={collegeClass.iconName} color={collegeClass.iconColor} />
                   </Card.Content>
                 </Card.Content>

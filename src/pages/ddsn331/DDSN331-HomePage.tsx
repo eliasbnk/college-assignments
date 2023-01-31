@@ -69,7 +69,7 @@ const DDSN331HomePage: FC = () => {
       <Template>
         <div>
           <Title>ASSIGNMENTS</Title>
-          <Card.Group fluid centered>
+          <Card.Group role='group' fluid centered>
             {assignments.map((assignment) => {
               return (
                 <Card
@@ -83,9 +83,9 @@ const DDSN331HomePage: FC = () => {
                 >
                   <Card.Content>
                     <Card.Header>{assignment.header}</Card.Header>
-                    <Card.Meta>{assignment.meta}</Card.Meta>
+                    <Card.Meta style={{ color: '#747474' }}>{assignment.meta}</Card.Meta>
                     <Card.Description>{assignment.description}</Card.Description>
-                    <Card.Content extra align='right'>
+                    <Card.Content extra style={{ textAlign: 'right' }}>
                       {assignment.extra === 'complete' ? (
                         <Icon name='check circle' color='green' />
                       ) : (

@@ -747,7 +747,7 @@ export const CISW400Assignment2RolloverImageData = [
     hoverName: 'indeed-hover',
     logoImage: IndeedLogo,
     textImage: IndeedText,
-    altText: 'Indeed Logo'
+    altText: 'Indeed Company Logo'
   },
 
   {
@@ -756,7 +756,7 @@ export const CISW400Assignment2RolloverImageData = [
     hoverName: 'linkedin-hover',
     logoImage: LinkedinLogo,
     textImage: LinkedinText,
-    altText: 'Linked Logo'
+    altText: 'Linked In Company Logo'
   },
   {
     id: uuidv4(),
@@ -764,7 +764,7 @@ export const CISW400Assignment2RolloverImageData = [
     hoverName: 'glassdoor-hover',
     logoImage: GlassdoorLogo,
     textImage: GlassdoorText,
-    altText: 'Glassdoor Logo'
+    altText: 'Glassdoor Company Logo'
   },
   {
     id: uuidv4(),
@@ -772,7 +772,7 @@ export const CISW400Assignment2RolloverImageData = [
     hoverName: 'crc-hover',
     logoImage: CRCLogoPNG,
     textImage: '',
-    altText: 'CRC logo'
+    altText: 'CRC College logo'
   }
 ];
 

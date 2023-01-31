@@ -8,7 +8,7 @@ const Template: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Content>{children}</Content>
+      <Content role='main'>{children}</Content>
       <Footer />
     </>
   );

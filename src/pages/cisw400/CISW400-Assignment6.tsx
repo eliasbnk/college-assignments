@@ -46,7 +46,7 @@ const CISW400Assignment6: FC = () => {
             options={CISW400Assignment6DestinationOptions}
             onChange={(_, { value }) => setDestination(value)}
           />
-          <Card.Group itemsPerRow={6} style={{ maxWidth: '570px', marginTop: '5px' }}>
+          <Card.Group role='group' itemsPerRow={6} style={{ maxWidth: '570px', marginTop: '5px' }}>
             {destination === 'au' ? (
               CISW400Assignment6AUImages.map((image) => {
                 return <ThumbnailImage key={image.id} image={image} setBigIMG={setBigIMG} />;

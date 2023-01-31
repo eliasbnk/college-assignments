@@ -50,7 +50,7 @@ const Navbar: FC = () => {
         <Label>Ilya Babenko · W1793796</Label>
       </div>
 
-      <Menu pointing secondary style={{ marginTop: '0px' }}>
+      <Menu role='navigation' pointing secondary style={{ marginTop: '0px' }}>
         <Menu.Item style={{ marginLeft: '19px' }} name='Home' active={activePage === '/'} as={Link} to={'/'} />
         {url === 'CISW 400' ? (
           <Menu.Item name='CISW 400' active={activePage === '/cisw400'} as={Link} to={'/cisw400'} />
